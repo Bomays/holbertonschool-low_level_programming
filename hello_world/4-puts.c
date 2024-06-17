@@ -1,7 +1,8 @@
 #include <stdio.h>
 
 /*
- *  main - Entry 
+ * main = entry
+ *
  * return when 0 = success
  */
 
