@@ -1,6 +1,8 @@
 #include <stdio.h>
+/* main - Entry 
+ * return when 0 = success */
 
-int main() 
-{	puts("\"Programming is like building a multilingual puzzle");   
+int main(void)
+{	puts("\"Programming is like building a multilingual puzzle");
 	return (0);
 }
