@@ -1,9 +1,13 @@
+/*
+ * preprocessing directive
+ */
+
 #include <stdio.h>
 
 /*
- * main = entry
+ * main function = entry point
  *
- * return when 0 = success
+ * return when 0  = success
  */
 
 int main(void)
