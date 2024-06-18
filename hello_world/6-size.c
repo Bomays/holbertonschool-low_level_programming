@@ -5,9 +5,9 @@
 #include <stdio.h>
 
 /**
- * main - prints the size of various types (...) and run on
+ * main - prints the size of various types(...)and run on
  *
- * return: always 0
+ * Return: Always 0.
  */
 
 int main(void)
