@@ -1,12 +1,41 @@
-#include <stdlib.h>
-#include <time.h>
-#include <stdio.h>
-
+#include "main.h"
 /**
- * main - Entry point
+ * times_table - print the 9 times table, starting with 0
  *
- * Return: Always 0
- *
+ * Description : it prints with a comma and space following
+ * Return: no return
  */
+void times_table(void)
+{
+	int i, j, result;
 
-int main(void)
+	for (i = 0; i <= 9; i++)
+	{
+		for (j = 0; j <= 9; j++)
+		{
+			result = i * j;
+
+			if (j != 0)
+			{
+				_putchar(',');
+				_putchar(' ');
+			}
+
+			if (result < 10)
+			{
+				if (j != 0)
+				{
+					_putchar(' ');
+				}
+				_putchar(result + '0');
+			}
+
+			else
+			{
+				_putchar((result / 10) + '0');
+				_putchar((result % 10) + '0');
+			}
+		}
+		_putchar('\n');
+	}
+}
