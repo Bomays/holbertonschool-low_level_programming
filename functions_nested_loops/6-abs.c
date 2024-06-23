@@ -1,12 +1,18 @@
-#include <stdlib.h>
-#include <time.h>
-#include <stdio.h>
-
+#include "main.h"
 /**
- * main - Entry point
+ * _abs - computes the absolute value of an integer.
  *
- * Return: Always 0
+ * @r: integer value
+ *
+ * Return: return the corresponding absolute value
+ * for example -8x(-1)=8
  *
  */
 
-int main(void)
+int _abs(int r)
+{
+	if (r >= 0)
+		return (r);
+	else
+		return (r * -1);
+}
