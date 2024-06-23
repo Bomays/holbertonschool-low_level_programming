@@ -1,12 +1,19 @@
-#include <stdlib.h>
-#include <time.h>
-#include <stdio.h>
-
+#include "main.h"
 /**
- * main - Entry point
+ * _isalpha - checks for alphabetic character.
+ * @c: it checks for both lower and uppercase letters
  *
- * Return: Always 0
- *
+ * Return: return 1 if 'c' is a letter, return 0 otherwise.
  */
+int _isalpha(int c)
+{
+	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
+	{
+		return (1);
+	}
 
-int main(void)
+	else
+	{
+		return (0);
+	}
+}
