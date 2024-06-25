@@ -21,9 +21,9 @@ int main(void)
 			printf("Buzz ");
 
 		else
-			printf("%d ", num);
+			printf("%d ", num);;
 	}
-	printf("\n");
+	printf("Buzz\n");
 
 	return (0);
 }
