@@ -4,11 +4,7 @@
  *
  * @size: is the size of the triangle
  * If 'size' is 0 or less, the function only prints a newline
- * # is the charater used to print the square
- *
- * @i: lines
- * @j: spaces
- * @k: #
+ * # is the charater used to print the triangle
  *
  * Return: None
  **/
