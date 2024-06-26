@@ -1,12 +1,23 @@
-#include <stdlib.h>
-#include <time.h>
-#include <stdio.h>
-
+#include "main.h"
 /**
- * main - Entry point
+ * _strlen - returns the length of a string.
  *
- * Return: Always 0
+ * @s: pointer to the start of the caraters chain
+ * and go ahead the caracters thanks to 'length'
+ * until it encounters the null terminator '\0',
+ * by being incremented of 1 each letter.
+ *
+ * Return: Always lenght
  *
  */
 
-int main(void)
+int _strlen(char *s)
+{
+	int length = 0;
+
+	while (s[length] != '\0')
+	{
+		length++;
+	}
+	return (length);
+}
