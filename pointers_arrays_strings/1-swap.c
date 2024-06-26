@@ -1,12 +1,17 @@
-#include <stdlib.h>
-#include <time.h>
-#include <stdio.h>
-
+#include "main.h"
 /**
- * main - Entry point
- *
- * Return: Always 0
+ * swap_int - swaps the values of two integers.
+ * @a: an integer input pointer
+ * @b: second integer input pointer
+ * Return : Always 0
  *
  */
 
-int main(void)
+void swap_int(int *a, int *b)
+{
+	int s = *a;
+	/**int swap - temporary integer*/
+
+	*a = *b;
+	*b = s;
+}
