@@ -1,12 +1,19 @@
-#include <stdlib.h>
-#include <time.h>
-#include <stdio.h>
-
+#include "main.h"
 /**
- * main - Entry point
+ * puts2 - prints every other character of a string,
+ *	starting with the first character, followed by a new line.
+ * @str: The string to print
  *
- * Return: Always 0
- *
+ * Return: None
  */
+void puts2(char *str)
+{
+	int a;
 
-int main(void)
+	for (a = 0; str[a] != '\0'; a += 2)
+	/*other method : if (a % 2 == 0) find even number (with a++ instead a += 2)*/
+	{
+			_putchar(str[a]);
+	}
+	_putchar('\n');
+}
