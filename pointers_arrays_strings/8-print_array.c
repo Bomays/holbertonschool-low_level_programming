@@ -3,8 +3,8 @@
 /**
  * print_array - prints n elements of an array of integers,
  * followed by a new line.
- * @a: array
- * @n: number of elements in the array
+ * @a: array.
+ * @n: number of elements in the array.
  * ind stand for the index
  * Return: None
  */
