@@ -12,6 +12,8 @@ void puts2(char *str)
 
 	for (a = 0; str[a] != '\0'; a += 2)
 	/*other method : if (a % 2 == 0) find even number (with a++ instead a += 2)*/
+	
+		if (str[a] != '\0' && '\n')
 	{
 			_putchar(str[a]);
 	}
