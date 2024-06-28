@@ -1,12 +1,24 @@
-#include <stdlib.h>
-#include <time.h>
+#include "main.h"
 #include <stdio.h>
-
-/**
- * main - Entry point
- *
- * Return: Always 0
- *
+/*
+ * print_array - prints n elements of an array of integers,
+ * followed by a new line.
+ * @str: The string to print
+ * ind stand for the index
+ * Return: None
  */
+void print_array(int *a, int n)
+{
+	int ind;
 
-int main(void)
+	for (ind = 0; ind < n; ind++)
+	{
+		printf("%d", a[ind]);
+
+		if (ind != (n - 1))
+		{
+			printf(", ");
+		}
+	}
+	putchar('\n');
+}
