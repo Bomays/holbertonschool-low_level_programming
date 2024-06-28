@@ -1,9 +1,10 @@
 #include "main.h"
 /**
  * _strcpy - copies string to a given memory location
- * 
+ *
  * @dest: the buffer point - destintation of the copy
- * @src: location of the strings pointed 
+ * @src: location of the strings pointed:w
+ *
  *
  * Return: return dest
  */
