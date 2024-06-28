@@ -1,12 +1,24 @@
-#include <stdlib.h>
-#include <time.h>
-#include <stdio.h>
-
+#include "main.h"
 /**
- * main - Entry point
+ * _strcpy - copies string to a given memory location
+ * 
+ * @dest: the buffer point - destintation of the copy
+ * @src: location of the strings pointed 
  *
- * Return: Always 0
- *
+ * Return: return dest
  */
+char *_strcpy(char *dest, char *src)
+{
+	char *start = dest;
 
-int main(void)
+	while (*src != '\0')
+
+	{
+		*dest = *src;
+		dest++;
+		src++;
+	}
+
+	*dest = '\0';
+	return (start);
+}
