@@ -1,9 +1,10 @@
 #include "main.h"
 #include <stdio.h>
-/*
+/**
  * print_array - prints n elements of an array of integers,
  * followed by a new line.
- * @str: The string to print
+ * @a: array
+ * @n: number of elements in the array
  * ind stand for the index
  * Return: None
  */
