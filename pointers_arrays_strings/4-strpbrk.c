@@ -6,7 +6,8 @@
  * @accept: reference string from where characters are checked and accepted
  * with index j
  *
- * Return: return nb_bytes
+ * Return: return a pointer to the byte in s that matches one of the bytes
+ * in accept, or NULL if no such byte is founds
  */
 char *_strpbrk(char *s, char *accept)
 {
