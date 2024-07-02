@@ -26,7 +26,7 @@ void print_diagsums(int *a, int size)
 	putchar('\n');
 }
 /**
- * diag1_sum - stock la somme 
+ * diag1_sum - stock la somme
  * diag1_sum += *(a + i * size + i):
  * donne la valeur de l’élément à la i-ème rangée
  * et à la i-ème colonne du tableau
@@ -40,4 +40,5 @@ void print_diagsums(int *a, int size)
  * diag2_sum += *(a + i * size + (size - i - 1)):
  * (...)
  * size -i -1 = pour la seconde diag afin de commencer par le dernier
- * element et ensuite avant dernier ainsi de suite*/
+ * element et ensuite avant dernier ainsi de suite
+ */
