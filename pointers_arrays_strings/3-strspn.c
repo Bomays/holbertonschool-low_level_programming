@@ -9,7 +9,7 @@
  * @accept: reference string from where characters are checked and accepted
  * with index j
  *
- * Return: return c in the string s, or NULL if the charcater is not found
+ * Return: return nb_bytes
  */
 unsigned int _strspn(char *s, char *accept)
 {
@@ -34,8 +34,20 @@ unsigned int _strspn(char *s, char *accept)
 	return (nb_bytes);
 }
 /**
+ * _strspn - locates a character in a string
+ *
+ * pointers are decomposed in the first active code (using i and j index)
+ * while they are not here
+ *
+ * @s: the string where we search
+ * @accept: reference string
+ *
+ * Return: return nb_bytes
+ *
+ *
+ *
  * unsigned int _strspn(char *s, char *accept)
- *{
+ * {
  *      unsigned int nb_bytes = 0;
  *	char *a = accept;
  *
