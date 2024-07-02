@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  *_strspn - locates a character in a string
- * 
+ *
  * pointers are decomposed in the first active code (using i and j index)
  * while they are not in the inactive second one
  *
@@ -28,37 +28,37 @@ unsigned int _strspn(char *s, char *accept)
 		if (accept[j] == '\0')
 		{
 		break;
-		}	
+		}
 		nb_bytes++;
 	}
 	return (nb_bytes);
 }
 /**
  * unsigned int _strspn(char *s, char *accept)
-{
-        unsigned int nb_bytes = 0;
-	char *a = accept;
-
-	while (*s)
-	{
-		while (*a)
-		{
-			if (*s == *a)
-			{
-				break;
-			}
-			a++;
-		}
-		if (*a == '\0')
-		{
-			break;
-		}	
-		s++;
-		nb_bytes++;
-	}
-	return (nb_bytes);
-}
-*/
+ *{
+ *      unsigned int nb_bytes = 0;
+ *	char *a = accept;
+ *
+ *	while (*s)
+ *	{
+ *		while (*a)
+ *		{
+ *			if (*s == *a)
+ *			{
+ *				break;
+ *			}
+ *			a++;
+ *		}
+ *		if (*a == '\0')
+ *		{
+ *			break;
+ *		}
+ *		s++;
+ *		nb_bytes++;
+ *	}
+ *	return (nb_bytes);
+ *}
+ */
 
 
 
