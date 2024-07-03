@@ -4,7 +4,8 @@
  *
  * @n: given number
  *
- * Return: return  -1 if n less than 0, return 1 if n is 0 and else return the factorial
+ * Return: return  -1 if n less than 0, return 1 if n is 0 and
+ * else return the factorial
  *
  */
 int factorial(int n)
