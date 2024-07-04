@@ -1,12 +1,12 @@
 #include "main.h"
 /**
+ * natural - natural square root value
  * _sqrt_recursion - function that returns the natural square root of a number
- * natural - natural square foot value
+ *
  * @n: number given
  * @i: the natural square root of number given
- * Return: returns -1 if n < 0, else return the natural square foot of n
  *
- * else returns the value of x raised to the power of y
+ * Return: returns -1 if n < 0, else return the natural square foot of n
  *
  */
 int natural(int n, int i)
@@ -24,7 +24,14 @@ int natural(int n, int i)
 		return (natural(n, i + 1));
 	}
 }
-
+/**
+ * _sqrt_recursion - function that returns the natural square root of a number
+ *
+ * @n:number given
+ *
+ * Return: returns -1 if n < 0, else return the natural square foot of n
+ *
+ */
 int _sqrt_recursion(int n)
 {
 	if (n < 0)
