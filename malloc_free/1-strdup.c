@@ -24,7 +24,8 @@ char *_strdup(char *str)
 		return (NULL);
 	}
 
-	length = strlen(str);/*Calculate the length of the input string st*/
+	length = strlen(str) + 1;/*Calculate the length of the input string str*/
+				  /*with the null character at the end*/
 
 	new_str = malloc(length * sizeof(char));
 	/*Allocate memory for the new string:*/
@@ -34,7 +35,7 @@ char *_strdup(char *str)
 		return (NULL);/*Check if the memory allocation was successful*/
 	}
 
-	strcpy(new_str, str);/*copy string to new one*/ int length
+	strcpy(new_str, str);/*copy string to new one*/
 
 	return (new_str);
 }
