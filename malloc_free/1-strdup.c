@@ -28,6 +28,10 @@ char *_strdup(char *str)
 	{
 		length++;
 	}
+	length++;
+	/*iterate the last NULL character*/
+	/*the same as for (length = 0; str[length] != '\0' || */
+	/*  str[length] == '\0'; length++)*/
 
 	new_str = malloc(length * sizeof(char));
 	/*Allocate memory for the new string:*/
