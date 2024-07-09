@@ -25,14 +25,14 @@ int main(int argc, char **argv)
 		return (0);
 	}
 	for (i = 1; i < argc; i++)
-	/*iterate through arguments*/
+	/*iterate through arguments from one - second arg*/
 	{
 		for (j = 0; argv[i][j] != '\0'; j++)
-			/*iterate through characters from 0*/
+			/*iterate through characters from 0 - first char*/
 		{
 			if (!isdigit(argv[i][j]))
-			/*isdigit tells if the arg is a number, we had ! so it*/
-			/* reverse it and so tells if the arg is not a number*/
+			/*isdigit tells if the arg is a number, we add ! so it*/
+			/* reverses it and tells if the arg is not a number*/
 			{
 				printf("Error\n");
 				{
