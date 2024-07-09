@@ -1,12 +1,24 @@
 #include <stdlib.h>
-#include <time.h>
 #include <stdio.h>
-
+#include "main.h"
 /**
- * main - Entry point
+ * free_grid - function that frees a 2 dimensional grid
+ * as the previous task alloc_grid prototype
  *
- * Return: Always 0
+ * @grid: double pointer to the grid the function frees
+ * @height: rows number
  *
+ * Return: return none - just free purpose of the function
  */
+void free_grid(int **grid, int height)
+{
+	int i = 0;
 
-int main(void)
+	while (i < height)
+	{
+		free((int *)grid[i]);
+		i++;
+	}
+
+	free(grid);
+}
