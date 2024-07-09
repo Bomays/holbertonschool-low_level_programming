@@ -1,4 +1,3 @@
-#include <string.h>
 #include <stdlib.h>
 #include <stdio.h>
 #include "main.h"
@@ -17,15 +16,18 @@
 char *_strdup(char *str)
 {
 	char *new_str;
-	int length;
+	int length = 0;
+	int i;
 
 	if (str == NULL)
 	{
 		return (NULL);
 	}
 
-	length = strlen(str) + 1;/*Calculate the length of the input string str*/
-				  /*with the null character at the end*/
+	while (str[length] != '\0')
+	{
+		length++;
+	}
 
 	new_str = malloc(length * sizeof(char));
 	/*Allocate memory for the new string:*/
@@ -35,7 +37,10 @@ char *_strdup(char *str)
 		return (NULL);/*Check if the memory allocation was successful*/
 	}
 
-	strcpy(new_str, str);/*copy string to new one*/
+	for (i = 0; i < length; i++)
+	{
+		new_str[i] = str[i];
+	}
 
 	return (new_str);
 }
