@@ -6,7 +6,7 @@
  * _calloc - function that allocates memory for an array, using malloc
  *
  * @nmemb: number of elements
- * @size: length byte size of elements
+ * @size: byte size of elements
  *
  * Return: If nmemb or size is 0, then _calloc returns NULL
  * If malloc fails, then _calloc returns NULL,
@@ -41,7 +41,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	/*nmemb * size represents the total amount of bytes of array*/
 	{
 		array[i] = 0;/*simply set bytes of allocated memory to 0*/
+	/*initialization verification {printf("array[%u] = %u\n", i, array[i]);}*/
 	}
-
 	return (array);
 }
