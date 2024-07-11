@@ -13,7 +13,7 @@
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	unsigned char *array;
+	char *array;
 	unsigned int i;
 
 	if (nmemb == 0)
@@ -26,7 +26,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	}
 
 	/*array = calloc(nmemb, sizeof(unsigned int)); forbidden use on checker*/
-	array = malloc(nmemb * sizeof(unsigned int));
+	array = malloc(nmemb * size);
 
 	if (array == NULL)
 	{
