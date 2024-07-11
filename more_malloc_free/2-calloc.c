@@ -26,7 +26,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 		return (NULL);
 	}
 
-	/*array = calloc(nmemb, sizeof(unsigned int));*/
+	/*array = calloc(nmemb, sizeof(unsigned int)); forbidden use on checker*/
 	array = malloc(nmemb * sizeof(unsigned int));
 
 	if (array == NULL)
@@ -35,11 +35,12 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	}
 
 	/*using malloc + memset to set memory to 0 instead of only calloc*/
-	memset(array, 0, nmemb * size);
+	/*memset(array, 0, nmemb * size);  forbidden use on checker*/
 
-	for (i = 0; i < size; i++)
+	for (i = 0; i < nmemb * size; i++)
+	/*nmemb * size represents the total amount of bytes of array*/
 	{
-		array[i] = nmemb;
+		array[i] = 0;/*simply set bytes of allocated memory to 0*/
 	}
 
 	return (array);
