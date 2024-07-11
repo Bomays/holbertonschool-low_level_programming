@@ -32,7 +32,6 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	{
 		return (NULL);
 	}
-	free(array);
 
 	/*using malloc + memset to set memory to 0 instead of only calloc*/
 	/*memset(array, 0, nmemb * size);  forbidden use on checker*/
