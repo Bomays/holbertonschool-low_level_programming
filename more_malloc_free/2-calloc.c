@@ -42,5 +42,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 		array[i] = 0;/*simply set bytes of allocated memory to 0*/
 	/*initialization verification {printf("array[%u] = %u\n", i, array[i]);}*/
 	}
+	free(array);
+
 	return (array);
 }
