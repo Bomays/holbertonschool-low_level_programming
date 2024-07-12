@@ -9,12 +9,12 @@
  * @owner: dog's owner name in a string
  */
 
-struct dog
+typedef struct dog
 {
 	float age;
 	char *name;
 	char *owner;
-};
+}	dog_t;
 
 /*----------------------------------------------*/
 
