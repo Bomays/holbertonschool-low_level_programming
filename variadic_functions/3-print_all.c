@@ -10,7 +10,7 @@
 void print_all(const char * const format, ...)
 {
 	va_list arglist;
-	int i = 0;
+	int i = 0, j = 0;
 	char *chain, type;
 
 	va_start(arglist, format);
@@ -20,7 +20,7 @@ void print_all(const char * const format, ...)
 		if (type == 'c' || type == 'i' || type == 'f' || type == 's')
 
 		{
-			if (i >= 1)
+			if (j > 0)
 				printf(", ");
 
 			switch (type)
@@ -43,6 +43,7 @@ void print_all(const char * const format, ...)
 				default:
 					break;
 			}
+			j++;
 		}
 		i++;
 	}
