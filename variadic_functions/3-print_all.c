@@ -38,10 +38,8 @@ void print_all(const char * const format, ...)
 			break;
 		case 's':
 			chain = va_arg(arglist, char*);
-			if (chain)
-				printf("%s", chain);
-			if (!chain)
-				printf("(nil)");
+			printf("%s", chain ? chain : "(nil)");
+			/* equivalent: printf("%s", chain); if (!chain) printf("(nil)");*/
 			arg_one = 0;
 			break;
 	}
