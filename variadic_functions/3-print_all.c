@@ -20,7 +20,7 @@ void print_all(const char * const format, ...)
 		if (type == 'c' || type == 'i' || type == 'f' || type == 's')
 
 		{
-			if (i > 0)
+			if (i >= 1)
 				printf(", ");
 
 			switch (type)
