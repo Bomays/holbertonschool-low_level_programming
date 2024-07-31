@@ -1,13 +1,12 @@
 #include <stdlib.h>
 #include <stdio.h>
-#include <string.h>
 #include "lists.h"
 /**
- * add_node - function that prints the list
+ * add_node - function that add a node at the beginning of the list 
  * @str: pointer to the string
  * @head: pointer to pointer to head of singly list
  *
- * Return: return (count) the number of nodes
+ * Return: return the new node
  *
  */
 list_t *add_node(list_t **head, const char *str)
