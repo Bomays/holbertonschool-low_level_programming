@@ -12,7 +12,8 @@
 void print_binary(unsigned long int n)
 {
 	unsigned int printstart = 0;
-	unsigned int bitmax = 32768;/**highest bit for 16bit*/
+	unsigned int bitmax = 0x7FFF;
+	/**or 32767 in decimal the highest value in 16bits*/
 
 	if (n == 0)
 	{
