@@ -12,7 +12,8 @@
 void print_binary(unsigned long int n)
 {
 	unsigned int printstart = 0;
-	unsigned int bitmax = 1UL << 31;
+	unsigned long int bitmax = 1UL << (sizeof(unsigned long int) * 8 - 1);
+	/**sizeof sizes bytes -  one byte is *8 bits*/
 
 	if (n == 0)
 	{
@@ -31,7 +32,7 @@ void print_binary(unsigned long int n)
 			_putchar('1');
 			printstart = 1;
 		}
-	bitmax >>= 1;/**divide bitmax by 2 moving it to next lower bit*/
-		     /** until bitmax equals 0*/
+		bitmax >>= 1;/**divide bitmax by 2 moving it to next lower bit*/
+		/** until bitmax equals 0*/
 	}
 }
