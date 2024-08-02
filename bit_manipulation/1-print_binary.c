@@ -12,7 +12,7 @@
 void print_binary(unsigned long int n)
 {
 	unsigned int printstart = 0;
-	unsigned int bitmax = 32768;
+	unsigned int bitmax = 1UL << 31;
 
 	if (n == 0)
 	{
