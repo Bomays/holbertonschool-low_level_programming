@@ -14,16 +14,16 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 	dlistint_t *delete_node;
 	unsigned int i = 0;
 
-	if (*head == NULL || head == NULL)
+	if (head == NULL || *head == NULL)
 	{
 		return (-1);
 	}
 
 	delete_node = *head;
-		for (; i < index; i++)
-		{
-			delete_node = delete_node->next;
-		}
+	for (; delete_node != NULL && i < index; i++)
+	{
+		delete_node = delete_node->next;
+	}
 	/**-------------------------------------*/
 	if (delete_node == NULL)
 	{
