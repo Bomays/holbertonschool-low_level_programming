@@ -11,8 +11,8 @@
  */
 int get_bit(unsigned long int n, unsigned int index)
 {
-	if (index > 32767)
-		/**0x7FFF in hexadecimal highest value in 16bits*/
+	if (index > 63)
+		/**0x3f in hexadecimal highest value in 16bits*/
 	{
 		return (-1);
 	}
