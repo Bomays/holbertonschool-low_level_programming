@@ -19,7 +19,7 @@
 int create_file(const char *filename, char *text_content)
 {
 	int fd;
-	int  bytesWritten;
+	int bytesWritten;
 	int len = 0;
 
 	if (filename == NULL)
@@ -38,9 +38,9 @@ int create_file(const char *filename, char *text_content)
 		while (text_content[len])
 			len++;
 
-		bytesWritten =  write(fd, text_content, len);
+		bytesWritten = write(fd, text_content, len);
 
-		if (bytesWritten != -1 || bytesWritten != len)
+		if (bytesWritten == -1 || bytesWritten != len)
 		{
 			close(fd);
 			return (-1);
