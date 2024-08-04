@@ -81,3 +81,21 @@ int copy_from_to_file(int argc, char **argv)
 	}
 	return (0);
 }
+/**
+ * main - Entry point of the program.
+ *
+ * Usage:
+ *     ./program_name file_from file_to
+ *
+ * @argc: arguments count - number of command line arguments
+ * @argv: argument vectors - array of command line arguments
+ *
+ * Return: Returns 0 when succeeded. If there is an error, the
+ *         program will exit with an exit code and print an error
+ *         message to the standard error.
+ */
+
+int main(int argc, char **argv)
+{
+	return (copy_from_to_file(argc, argv));
+}
