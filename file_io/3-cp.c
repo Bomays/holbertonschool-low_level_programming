@@ -93,6 +93,7 @@ int copy_from_to_file(int argc, char **argv)
  * Return: Returns 0 when succeeded. If there is an error, the
  *         program will exit with an exit code and print an error
  *         message to the standard error.
+ *
  */
 int main(int argc, char **argv)
 {
