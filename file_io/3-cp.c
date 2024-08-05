@@ -55,6 +55,12 @@ int copy_from_to_file(int argc, char **argv)
 		close(fd_from);
 		exit_error(99, "Can't write to", argv[2], fd_to);
 	}
+	if (chmod(argv[2], 0664) == -1)
+	{
+		close(fd_from);
+		close(fd_to);
+		exit_error(99, "Can't change permissions of", argv[2], fd_to);
+	}
 	while ((fRead = read(fd_from, buffer, 1024)) > 0)
 	{
 		fWrite = write(fd_to, buffer, fRead);
