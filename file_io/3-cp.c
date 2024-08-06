@@ -62,6 +62,9 @@ int copy_from_to_file(int argc, char **argv)
 	}
 	while ((fRead = read(fd_from, buffer, 1024)) > 1)
 	{
+		if (fRead == -1)
+			exit_error(98, "Can't read from file", argv[1], fd_from);
+
 		fWrite = write(fd_to, buffer, fRead);
 		if (fWrite == -1)
 		{
