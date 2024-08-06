@@ -7,9 +7,10 @@
  * exit_error - function that prints an error message
  * to standard error and exit prog
  *
- * @exit_code: exit code while ending prog
+ * @code: exit code while ending prog
  * @message: message printed to describe the error
  * @file: file descriptor related to the problem
+ * @fd: the opening file descriptor
  *
  * Return: void return
  */
@@ -49,7 +50,7 @@ int copy_from_to_file(int argc, char **argv)
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
-	fd_from = open(argv[1], O_RDONLY);
+	fd_from = open(argv[1], O_RDONLY, 0664);
 	if (fd_from == -1)
 	{
 		exit_error(98, "Can't read from file", argv[1], fd_from);
