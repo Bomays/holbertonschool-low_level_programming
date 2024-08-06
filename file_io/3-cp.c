@@ -66,8 +66,6 @@ int copy_from_to_file(int argc, char **argv)
 		fWrite = write(fd_to, buffer, fRead);
 		if (fWrite == -1)
 		{
-			close(fd_from);
-			close(fd_to);
 			exit_error(99, "Can't write to", argv[2], fd_to);
 		}
 	}
