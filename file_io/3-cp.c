@@ -70,8 +70,6 @@ int copy_from_to_file(int argc, char **argv)
 	}
 	if (fRead == -1)/*Verification*/
 	{
-		close(fd_from);
-		close(fd_to);
 		exit_error(98, "Can't read from file", argv[1], fd_from);
 	}
 	if (close(fd_from) == -1)
