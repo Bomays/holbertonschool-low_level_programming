@@ -52,16 +52,15 @@ int copy_from_to_file(int argc, char **argv)
 	}
 	fd_from = open(argv[1], O_RDONLY);
 	if (fd_from == -1)
-	{
 		exit_error(98, "Can't read from file", argv[1], fd_from);
-	}
+
 	fd_to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	if (fd_to == -1)
 	{
 		close(fd_from);
 		exit_error(99, "Can't write to", argv[2], fd_to);
 	}
-	while ((fRead = read(fd_from, buffer, 1024)) > 0)
+	while ((fRead = read(fd_from, buffer, 1024)) > 1)
 	{
 		fWrite = write(fd_to, buffer, fRead);
 		if (fWrite == -1)
@@ -76,13 +75,11 @@ int copy_from_to_file(int argc, char **argv)
 		exit_error(98, "Can't read from file", argv[1], fd_from);
 	}
 	if (close(fd_from) == -1)
-	{
 		exit_error(100, "Can't close fd", argv[1], fd_from);
-	}
+
 	if (close(fd_to) == -1)
-	{
 		exit_error(100, "Can't close fd", argv[2], fd_to);
-	}
+
 	return (0);
 }
 /**
