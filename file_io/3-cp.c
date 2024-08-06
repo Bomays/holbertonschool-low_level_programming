@@ -13,7 +13,7 @@
  *
  * Return: void return
  */
-void exit_error(int exit_code, const char *message, const char *file, int fd)
+void exit_error(int code, const char *message, const char *file, int fd)
 {
 	dprintf(STDERR_FILENO, "Error: %s %s\n", message, file);
 
@@ -21,7 +21,7 @@ void exit_error(int exit_code, const char *message, const char *file, int fd)
 	{
 		close(fd);
 	}
-	exit(exit_code);
+	exit(code);
 }
 /**
  * copy_from_to_file - program that copies
@@ -58,7 +58,6 @@ int copy_from_to_file(int argc, char **argv)
 	if (fd_to == -1)
 	{
 		close(fd_from);
-		close(fd_to);
 		exit_error(99, "Can't write to", argv[2], fd_to);
 	}
 	while ((fRead = read(fd_from, buffer, 1024)) > 0)
