@@ -46,19 +46,23 @@ int copy_from_to_file(int argc, char **argv)
 	char buffer[1024];
 
 	if (argc != 3)
+	{
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
-
+	}
 	fd_from = open(argv[1], O_RDONLY);
 	if (fd_from == -1)
+	{
 		exit_error(98, "Can't read from file", argv[1], fd_from);
-
+	}
 	fd_to = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	if (fd_to == -1)
+	{
 		close(fd_from);
 		exit_error(99, "Can't write to", argv[2], fd_to);
-
+	}
 	while ((fRead = read(fd_from, buffer, 1024)) > 0)
+	{
 		fWrite = write(fd_to, buffer, fRead);
 		if (fWrite == -1)
 		{
@@ -66,6 +70,7 @@ int copy_from_to_file(int argc, char **argv)
 			close(fd_to);
 			exit_error(99, "Can't write to", argv[2], fd_to);
 		}
+	}
 	if (fRead == -1)/*Verification*/
 	{
 		close(fd_from);
