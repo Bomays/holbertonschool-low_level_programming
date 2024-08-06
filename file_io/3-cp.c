@@ -13,7 +13,7 @@
  *
  * Return: void return
  */
-void exit_error(int exit_code, const char *message, const char *file, int fd)
+void exit_error(int exit_code, const char *message, const char *file)
 {
 	dprintf(STDERR_FILENO, "Error: %s %s\n", message, file);
 	exit(exit_code);
