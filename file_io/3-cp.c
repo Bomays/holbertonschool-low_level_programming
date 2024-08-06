@@ -15,7 +15,7 @@
  */
 void exit_error(int exit_code, const char *message, const char *file, int fd)
 {
-	dprintf(STDERR_FILENO, "Error: %s %s (fd: %d)\n", message, file, fd);
+	dprintf(STDERR_FILENO, "Error: %s %s\n", message, file);
 	exit(exit_code);
 }
 /**
